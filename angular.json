@@ -59,6 +59,14 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false,
+                },
+                "fonts": false
+              },
               "outputHashing": "all"
             },
             "development": {
@@ -66,7 +74,7 @@
               "optimization": {
                 "scripts": true,
                 "styles": {
-                  "manify": true,
+                  "minify": true,
                   "inlineCritical": false
                 },
                 "fonts": false
