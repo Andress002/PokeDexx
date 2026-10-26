@@ -34,7 +34,7 @@ En esta parte se configuran las cabeceras de seguridad para llegar a la nota A+.
 2. Agregarlo a `assets` en `angular.json` para que se copie a `dist/pokedex-angular`.
 
 
-Esto es necesario porque azure solo lee el archivo `staticwebapp.config.json` desde la carpeta compilada (`dist/pokedex-angular`), no desde `src`. Angular, al compilar, solo copia a `dist` lo que está listado en `assets` de `angular.json`. Si el archivo no se agrega ahí, no llega a `dist`, Azure no lo encuentra y las cabeceras no se aplican.
+Esto es necesario porque azure busca el archivo `staticwebapp.config.json` en la carpeta compilada (`dist/pokedex-angular`). Angular, al compilar, solo copia a `dist` lo que está listado en `assets` de `angular.json`. Si el archivo no se agrega ahi, no llega a `dist`, y las cabeceras pueden no aplicarse.
 
 contenido del staticwebapp.config.json
 
@@ -78,4 +78,4 @@ Esperar el check en **Actions** de GitHub y abrir la URL.
 
 ## 6. Escanear
 
-Entrar a https://securityheaders.com, pegar la URL y presionar **Scan**.
+Entrar a https://securityheaders.com, pegar la URL y presionar `Scan`.
